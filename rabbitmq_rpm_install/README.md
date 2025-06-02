@@ -1,4 +1,4 @@
-# RabbitMQ Custom Installation Guide v3
+# Custom RabbitMQ 4.1 Installation for RHEL 8.10
 
 This guide covers installing RabbitMQ 4.1.0 using our custom RPM and automated installation scripts for both production and test environments.
 
