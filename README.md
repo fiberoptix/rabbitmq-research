@@ -38,7 +38,7 @@ rabbitmq-research/
 │   └── erlang-27.2.4-1.el8.x86_64.rpm  # Custom Erlang package (22MB)
 │
 └── rabbitmq_rpm_install/         # RabbitMQ 4.1.0 installation components
-    ├── rabbitmq-install-guide_v3.md     # Comprehensive installation guide
+    ├── README.md                 # Comprehensive installation guide
     ├── rabbitmq-prod-install-v3.sh      # Production environment script
     ├── rabbitmq-test-install.sh         # Test/dev environment script
     └── rabbitmq-server-4.1.0-1.el8.noarch-v2.rpm  # Custom RabbitMQ package (86MB)
@@ -94,7 +94,7 @@ For complete Erlang installation instructions, troubleshooting, and configuratio
 
 ### RabbitMQ Installation  
 For comprehensive RabbitMQ installation, configuration, and post-installation setup:
-👉 **[RabbitMQ Installation Guide](rabbitmq_rpm_install/rabbitmq-install-guide_v3.md)**
+👉 **[RabbitMQ Installation Guide](rabbitmq_rpm_install/README.md)**
 
 ## 🎯 Key Benefits
 
