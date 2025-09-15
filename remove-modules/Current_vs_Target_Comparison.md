@@ -1,5 +1,7 @@
 # **Current Modules System vs Target Custom RPM System**
 
+**Note**: Replace `tmv_prod_run_rmq1` and `tmv_prod_run_rmq1_g` with your organization's actual RabbitMQ service account and group names.
+
 ## **🔄 COMPLETE SYSTEM COMPARISON**
 
 ### **CURRENT STATE: Environment Modules System**

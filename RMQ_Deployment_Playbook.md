@@ -16,6 +16,8 @@ Deploy RabbitMQ 4.1.0 + Erlang 27.2.4 custom RPM system on RHEL 8.10 servers. Su
 - ✅ Root access confirmed
 - ✅ Service user `tmv_prod_run_rmq1` exists
 
+**Note**: Replace `tmv_prod_run_rmq1` and `tmv_prod_run_rmq1_g` with your organization's actual RabbitMQ service account and group names.
+
 ---
 
 ## **🚀 PHASE 2: UPGRADE EXECUTION**

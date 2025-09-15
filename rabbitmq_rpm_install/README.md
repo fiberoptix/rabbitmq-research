@@ -19,6 +19,8 @@ Both approaches install RabbitMQ to `/app/layered/rabbitmq` and integrate with s
    - **Test**: Will be created automatically by test script
 3. **Root/sudo access** for installation
 
+**Note**: Replace `tmv_prod_run_rmq1` and `tmv_prod_run_rmq1_g` with your organization's actual RabbitMQ service account and group names.
+
 ### Package Contents
 - `rabbitmq-server-4.1.0-1.el8.noarch-v2.rpm` - Custom RabbitMQ RPM (87MB)
 - `rabbitmq-prod-install-v3.sh` - Production installation script (18KB)

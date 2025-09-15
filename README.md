@@ -100,6 +100,8 @@ sudo ./remove-modules/disable-modules.sh    # Remove modules integration
 ## 🛡️ Security Features
 
 - **Dedicated Service User**: `tmv_prod_run_rmq1` with group `tmv_prod_run_rmq1_g`
+  
+  **Note**: Replace `tmv_prod_run_rmq1` and `tmv_prod_run_rmq1_g` with your organization's actual RabbitMQ service account and group names.
 - **Secure Permissions**: 755 instead of default 777 permissions
 - **SELinux Integration**: Automatic context configuration for RHEL/CentOS
 - **System Limits**: Configured file descriptor limits for high-performance operation

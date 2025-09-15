@@ -16,6 +16,8 @@ This directory contains the files needed to install a custom build of Erlang 27.
 - **Privileges**: `sudo` access required for installation
 - **Network**: Access to RHEL repositories for dependency installation
 
+**Note**: Replace `tmv_prod_run_rmq1` and `tmv_prod_run_rmq1_g` with your organization's actual RabbitMQ service account and group names.
+
 ## Installation Process
 
 ### Step 1: Transfer Files

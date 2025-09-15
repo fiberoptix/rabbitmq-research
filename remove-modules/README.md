@@ -61,6 +61,8 @@ This modules removal process integrates seamlessly with the custom RPM installat
 - **Current Erlang**: 26.1 with Environment Modules
 - **Service User**: `tmv_prod_run_rmq1` (must exist)
 
+**Note**: Replace `tmv_prod_run_rmq1` and `tmv_prod_run_rmq1_g` with your organization's actual RabbitMQ service account and group names.
+
 ## 🎯 Expected Outcome
 
 After successful removal and upgrade:
