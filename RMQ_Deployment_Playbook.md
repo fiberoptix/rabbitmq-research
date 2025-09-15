@@ -1,7 +1,7 @@
-# RabbitMQ Production Upgrade Playbook
+# RabbitMQ Deployment Playbook
 
 ## **🎯 OBJECTIVE**
-Upgrade RabbitMQ from modules-based system (3.12.6 + Erlang 26.1) to custom RPM system (4.1.0 + Erlang 27.2.4) on RHEL 8.10 production server.
+Deploy RabbitMQ 4.1.0 + Erlang 27.2.4 custom RPM system on RHEL 8.10 servers. Supports both fresh installations and migrations from Environment Modules-based systems (3.12.6 + Erlang 26.1).
 
 ## **⚠️ PREREQUISITES**
 - ✅ vSphere snapshot taken

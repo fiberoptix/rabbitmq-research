@@ -31,6 +31,7 @@ The installation process follows a two-stage approach:
 
 ```
 rabbitmq-research/
+├── RMQ_Deployment_Playbook.md   # PRIMARY: Step-by-step deployment guide
 ├── erlang_rpm_install/           # Erlang 27.2.4 installation components
 │   ├── README.md                 # Detailed Erlang installation guide
 │   ├── erlang-pre-install.sh     # Dependency installation script
@@ -45,8 +46,7 @@ rabbitmq-research/
 │
 └── remove-modules/               # OPTIONAL: Environment Modules removal tools
     ├── README.md                 # Modules removal guide and documentation
-    ├── disable-modules.sh        # Production-ready modules removal script
-    └── rmq-upgrade-playbook.md   # Step-by-step upgrade playbook
+    └── disable-modules.sh        # Production-ready modules removal script
 ```
 
 ## 🚀 Quick Start
@@ -76,37 +76,26 @@ cd ../rabbitmq_rpm_install/
 sudo ./rabbitmq-test-install.sh
 ```
 
-## 🔄 Migrating from Environment Modules - OPTIONAL
+## 🚀 Production Deployment
 
-**Note**: This section is only relevant if you have an existing RabbitMQ installation using Environment Modules (the `module load` command system).
+**For complete step-by-step deployment** (fresh install or migration from Environment Modules):
 
-If you have an existing RabbitMQ installation that uses Environment Modules and need to migrate to this custom RPM system:
+👉 **[RabbitMQ Deployment Playbook](RMQ_Deployment_Playbook.md)**
 
-### Prerequisites for Migration
-- **Current System**: RabbitMQ 3.12.6 + Erlang 26.1 with Environment Modules
-- **Target System**: RabbitMQ 4.1.0 + Erlang 27.2.4 with custom RPMs
-- **Safety**: Take system snapshot and export RabbitMQ configuration before proceeding
+This playbook provides:
+- ✅ **Complete operational process** (~30-40 minutes)
+- ✅ **Safety checks and rollback procedures**
+- ✅ **Fresh installations** and **Environment Modules migrations**
+- ✅ **Verification and testing steps**
 
-### Migration Process
+### Quick Migration Overview
+If migrating from Environment Modules (RabbitMQ 3.12.6 + Erlang 26.1):
 ```bash
-# 1. Remove Environment Modules integration
-cd remove-modules/
-sudo ./disable-modules.sh
-
-# 2. Follow standard installation process above
-cd ../erlang_rpm_install/
-sudo ./erlang-pre-install.sh
-sudo ./erlang-install.sh
-
-cd ../rabbitmq_rpm_install/
-sudo dnf install -y ./rabbitmq-server-4.1.0-1.el8.noarch-v2.rpm
-sudo ./rabbitmq-prod-install-v3.sh
+sudo ./remove-modules/disable-modules.sh    # Remove modules integration
+# [Complete process in deployment playbook]
 ```
 
-For detailed migration guidance and troubleshooting:
-👉 **[Environment Modules Removal Guide](remove-modules/README.md)**
-
-**If you don't have Environment Modules**, skip this section and proceed directly with the standard installation process above.
+**Always take system snapshots and export RabbitMQ configurations before proceeding.**
 
 ## 🛡️ Security Features
 
@@ -125,17 +114,16 @@ For detailed migration guidance and troubleshooting:
 
 ## 📖 Detailed Documentation
 
-### Erlang Installation
-For complete Erlang installation instructions, troubleshooting, and configuration details:
-👉 **[Erlang Installation Guide](erlang_rpm_install/README.md)**
+### Primary Operational Guide
+For complete step-by-step deployment process:
+👉 **[RabbitMQ Deployment Playbook](RMQ_Deployment_Playbook.md)**
 
-### RabbitMQ Installation  
-For comprehensive RabbitMQ installation, configuration, and post-installation setup:
-👉 **[RabbitMQ Installation Guide](rabbitmq_rpm_install/README.md)**
+### Component-Specific Guides
+For detailed component information and troubleshooting:
 
-### Environment Modules Removal (Optional)
-For systems currently using Environment Modules with RabbitMQ and needing to migrate:
-👉 **[Environment Modules Removal Guide](remove-modules/README.md)**
+- **Erlang Details**: [Erlang Installation Guide](erlang_rpm_install/README.md)
+- **RabbitMQ Details**: [RabbitMQ Installation Guide](rabbitmq_rpm_install/README.md)  
+- **Environment Modules Background**: [Environment Modules Removal Guide](remove-modules/README.md)
 
 ## 🎯 Key Benefits
 

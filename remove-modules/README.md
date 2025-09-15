@@ -12,7 +12,6 @@ Removes Environment Modules integration from existing RabbitMQ installations run
 
 ### **Core Tools**
 - **`disable-modules.sh`** - Main removal script with safety checks and rollback capability
-- **`rmq-upgrade-playbook.md`** - Step-by-step production upgrade guide
 
 ### **Documentation**
 - **`Modules_Explained.md`** - What Environment Modules are and why they're used
@@ -31,8 +30,8 @@ Removes Environment Modules integration from existing RabbitMQ installations run
 # 1. Disable modules system
 sudo ./disable-modules.sh
 
-# 2. Follow upgrade playbook
-# See rmq-upgrade-playbook.md for complete step-by-step process
+# 2. Follow deployment playbook
+# See ../RMQ_Deployment_Playbook.md for complete step-by-step process
 
 # 3. Install new system using scripts from parent directories:
 #    ../erlang_rpm_install/
@@ -53,7 +52,7 @@ This modules removal process integrates seamlessly with the custom RPM installat
 1. **Assessment**: Use documentation here to understand current system
 2. **Removal**: Run `disable-modules.sh` to safely remove modules integration  
 3. **Installation**: Use `../erlang_rpm_install/` and `../rabbitmq_rpm_install/` for new system
-4. **Guidance**: Follow `rmq-upgrade-playbook.md` for complete process
+4. **Guidance**: Follow `../RMQ_Deployment_Playbook.md` for complete process
 
 ## 📋 Supported Systems
 
