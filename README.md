@@ -64,7 +64,7 @@ sudo dnf install -y ./rabbitmq-server-4.1.0-1.el8.noarch-v2.rpm
 sudo ./rabbitmq-prod-install-v3.sh
 ```
 
-### For Test/Development Environments
+### For Non-Kerberos Environments
 ```bash
 # 1. Install Erlang first
 cd erlang_rpm_install/
