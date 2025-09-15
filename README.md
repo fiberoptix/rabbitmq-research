@@ -37,11 +37,16 @@ rabbitmq-research/
 │   ├── erlang-install.sh         # Main Erlang installation script
 │   └── erlang-27.2.4-1.el8.x86_64.rpm  # Custom Erlang package (22MB)
 │
-└── rabbitmq_rpm_install/         # RabbitMQ 4.1.0 installation components
-    ├── README.md                 # Comprehensive installation guide
-    ├── rabbitmq-prod-install-v3.sh      # Production environment script
-    ├── rabbitmq-test-install.sh         # Test/dev environment script
-    └── rabbitmq-server-4.1.0-1.el8.noarch-v2.rpm  # Custom RabbitMQ package (86MB)
+├── rabbitmq_rpm_install/         # RabbitMQ 4.1.0 installation components
+│   ├── README.md                 # Comprehensive installation guide
+│   ├── rabbitmq-prod-install-v3.sh      # Production environment script
+│   ├── rabbitmq-test-install.sh         # Test/dev environment script
+│   └── rabbitmq-server-4.1.0-1.el8.noarch-v2.rpm  # Custom RabbitMQ package (86MB)
+│
+└── remove-modules/               # OPTIONAL: Environment Modules removal tools
+    ├── README.md                 # Modules removal guide and documentation
+    ├── disable-modules.sh        # Production-ready modules removal script
+    └── rmq-upgrade-playbook.md   # Step-by-step upgrade playbook
 ```
 
 ## 🚀 Quick Start
@@ -71,6 +76,38 @@ cd ../rabbitmq_rpm_install/
 sudo ./rabbitmq-test-install.sh
 ```
 
+## 🔄 Migrating from Environment Modules - OPTIONAL
+
+**Note**: This section is only relevant if you have an existing RabbitMQ installation using Environment Modules (the `module load` command system).
+
+If you have an existing RabbitMQ installation that uses Environment Modules and need to migrate to this custom RPM system:
+
+### Prerequisites for Migration
+- **Current System**: RabbitMQ 3.12.6 + Erlang 26.1 with Environment Modules
+- **Target System**: RabbitMQ 4.1.0 + Erlang 27.2.4 with custom RPMs
+- **Safety**: Take system snapshot and export RabbitMQ configuration before proceeding
+
+### Migration Process
+```bash
+# 1. Remove Environment Modules integration
+cd remove-modules/
+sudo ./disable-modules.sh
+
+# 2. Follow standard installation process above
+cd ../erlang_rpm_install/
+sudo ./erlang-pre-install.sh
+sudo ./erlang-install.sh
+
+cd ../rabbitmq_rpm_install/
+sudo dnf install -y ./rabbitmq-server-4.1.0-1.el8.noarch-v2.rpm
+sudo ./rabbitmq-prod-install-v3.sh
+```
+
+For detailed migration guidance and troubleshooting:
+👉 **[Environment Modules Removal Guide](remove-modules/README.md)**
+
+**If you don't have Environment Modules**, skip this section and proceed directly with the standard installation process above.
+
 ## 🛡️ Security Features
 
 - **Dedicated Service User**: `tmv_prod_run_rmq1` with group `tmv_prod_run_rmq1_g`
@@ -95,6 +132,10 @@ For complete Erlang installation instructions, troubleshooting, and configuratio
 ### RabbitMQ Installation  
 For comprehensive RabbitMQ installation, configuration, and post-installation setup:
 👉 **[RabbitMQ Installation Guide](rabbitmq_rpm_install/README.md)**
+
+### Environment Modules Removal (Optional)
+For systems currently using Environment Modules with RabbitMQ and needing to migrate:
+👉 **[Environment Modules Removal Guide](remove-modules/README.md)**
 
 ## 🎯 Key Benefits
 
