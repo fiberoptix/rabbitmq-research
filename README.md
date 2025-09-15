@@ -44,9 +44,15 @@ rabbitmq-research/
 │   ├── rabbitmq-test-install.sh         # Test/dev environment script
 │   └── rabbitmq-server-4.1.0-1.el8.noarch-v2.rpm  # Custom RabbitMQ package (86MB)
 │
-└── remove-modules/               # OPTIONAL: Environment Modules removal tools
-    ├── README.md                 # Modules removal guide and documentation
-    └── disable-modules.sh        # Production-ready modules removal script
+├── remove-modules/               # OPTIONAL: Environment Modules removal tools
+│   ├── README.md                 # Modules removal guide and documentation
+│   └── disable-modules.sh        # Production-ready modules removal script
+│
+└── maintainer-docs/              # Technical maintenance and build documentation
+    ├── README.md                 # Maintainer resources and AI assistant guidance
+    ├── build-environment-setup.md        # Build host setup requirements
+    ├── erlang_rpm_build_session_notes.md # Complete Erlang build process
+    └── rabbitmq_rpm_build_session_notes.md # Complete RabbitMQ build process
 ```
 
 ## 🚀 Quick Start
@@ -126,6 +132,10 @@ For detailed component information and troubleshooting:
 - **Erlang Details**: [Erlang Installation Guide](erlang_rpm_install/README.md)
 - **RabbitMQ Details**: [RabbitMQ Installation Guide](rabbitmq_rpm_install/README.md)  
 - **Environment Modules Background**: [Environment Modules Removal Guide](remove-modules/README.md)
+
+### Technical Maintenance
+For rebuilding RPMs, version updates, and AI assistant collaboration:
+👉 **[Maintainer Documentation](maintainer-docs/README.md)**
 
 ## 🎯 Key Benefits
 
