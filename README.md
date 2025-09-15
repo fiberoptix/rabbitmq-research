@@ -1,4 +1,4 @@
-# RabbitMQ Research & Custom Installation
+# RabbitMQ Research & Custom Deployment Solutions
 
 A comprehensive, enterprise-ready installation solution for RabbitMQ 4.1.0 and Erlang 27.2.4 on RHEL 8.10 systems. This project provides custom RPM packages and automated installation scripts designed for secure, production-grade deployments.
 
